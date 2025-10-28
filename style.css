@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700display=swap');
+
+:root {
+    --cor-principal: #637351;
+    --cor-destaque: #92a66b;
+    --cor-texto: beige;
+    --cor-fundo: #25252538;
+    --fonte-principal: 'Instrument Sans';
+    text-shadow: black 0.5px 0.5px 0.5px;
+
+}
+
+body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    color: var(--cor-texto);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background:
+        radial-gradient(50% 50% at 100% 0, #52652d 0% 5%, #637351 6% 15%, #52652d 16% 25%, #637351 26% 35%, #52652d 36% 45%,
+            #637351 46% 55%, #52652d 56% 65%, #637351 66% 75%, #52652d 76% 85%, #637351 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50% at 0 100%, #52652d 0% 5%, #637351 6% 15%, #52652d 16% 25%, #637351 26% 35%, #52652d 36% 45%,
+            #637351 46% 55%, #52652d 56% 65%, #637351 66% 75%, #52652d 76% 85%, #637351 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50%, #52652d 0% 5%, #637351 6% 15%, #52652d 16% 25%, #637351 26% 35%, #52652d 36% 45%,
+            #637351 46% 55%, #52652d 56% 65%, #637351 66% 75%, #52652d 76% 85%, #637351 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50%, #52652d 0% 5%, #637351 6% 15%, #52652d 16% 25%, #637351 26% 35%, #52652d 36% 45%,
+            #637351 46% 55%, #52652d 56% 65%, #637351 66% 75%, #52652d 76% 85%, #637351 86% 95%,
+            #0000 96%) 10px 10px;
+    background-size: 20px 20px;
+    background-color: #52652d;
+}
+
+/* PERFIL */
+.perfil {
+    background: inherit;
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2pt 1.5rem;
+}
+
+.perfil img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    margin-bottom: 1rem;
+    box-shadow: black 1px 1px 1px;
+}
+
+.perfil h1 {
+    color: #92a66b;
+    margin: 0;
+    font-size: 22pt;
+    text-shadow: black 1px 1px 1px;
+}
+
+.perfil h2 {
+    margin: 0;
+    font-size: 13pt;
+}
+
+.perfil p {
+    font-size: 11pt;
+    margin: 0.4rem 0 1.5rem;
+    text-shadow: black 1px 1px 1px;
+}
+
+.perfil ul {
+    font-size: 11pt;
+    margin: 1rem 0;
+    list-style-type: none;
+    text-shadow: black 1px 1px 1px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: center;
+}
+
+.botoes a {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--cor-destaque);
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    width: 80%;
+    transition: all 0.3s ease;
+}
+
+.botoes a:hover {
+    background-color: #0d4e42;
+    transform: translateY(-2px);
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    /* garante altura total da janela */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;
+    gap: 1rem;                /* espaço entre imagens */
+    margin-top: 1rem;
+    flex-wrap: wrap;          /* permite quebrar em ecrãs pequenos */
+}
+
+.imagens img {
+    max-width: 300px;
+    width: 45%;               /* cada imagem ocupa metade da largura */
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+section {
+    flex: 0 0 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
+    overflow-y: auto;
+}
+
+h2 {
+    border-bottom: 2px solid var(--cor-destaque);
+    box-shadow: black 0px 0.5px 0px;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 12pt;
+    text-transform: uppercase;
+    text-shadow: black 1px 1px 1px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+.conteudo article {
+    margin-bottom: 1rem;
+}
+
+.conteudo h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.conteudo span {
+    display: block;
+    font-size: 0.85rem;
+    text-shadow: none;
+    color: var(--cor-destaque);
+}
+
+ul {
+    list-style: disc inside;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* SETAS DE NAVEGAÇÃO */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.seta svg {
+    width: 18px;
+    /* tamanho da seta dentro do círculo */
+    height: 18px;
+    pointer-events: none;
+    /* evita clique direto no SVG */
+}
+
+.seta:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Posicionamento lateral */
+.seta-esquerda {
+    left: 0.5rem;
+}
+
+.seta-direita {
+    right: 0.5rem;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--cor-principal);
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    color: white;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: auto;
+    }
+
+    .perfil {
+        flex: 0 0 250px;
+    }
+}
